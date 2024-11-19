@@ -1,6 +1,3 @@
-<?php
-    include "./heading.php";
-?>
 <div class="navegacion">
     <h2 class="nombre-carrito">Carrito Miguel</h2>
     <div class="contenedor-enlaces">
