@@ -10,12 +10,13 @@
     background-color: #273a4b;
     width: 99%;
     margin-left: -10px;
-    margin-top: -10px;
     height: 60px;
     padding-left: 20px;
     padding-right: 20px;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top:0;
 }
 
 .inicio-sesion{
@@ -61,6 +62,7 @@
     margin-right: 90px;
     margin-top: 50px;
     column-gap: 40px;
+    row-gap: 40px;
     display: grid;
     grid-template-columns: repeat(3,1fr);
 }
@@ -119,6 +121,7 @@
     border-radius: 5px;
     font-weight: bold;
     font-size: 15px;
+    cursor: pointer;
 }
 
 .boton-comprar:hover{
