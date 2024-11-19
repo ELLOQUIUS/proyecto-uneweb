@@ -4,6 +4,8 @@
     <p class="precio"><?= $row["precio"];?> $</p>
     <img class="imagen" src="<?= $row["foto"];?>" alt="<?= $row["nombre"];?>">
     <p class="descripcion"><?= $row["descripcion"];?></p>
-    <button>Agregar Carrito</button>
-    <button>Comprar</button>
+    <div class="botones">
+        <button class="boton boton-agregar">Agregar a Carrito</button>
+        <button class="boton boton-comprar">Comprar</button>
+    </div>
 </div>
