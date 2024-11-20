@@ -4,5 +4,5 @@
         <a class="enlace" href="index.php">Home</a>
         <a class="enlace" href="carrito.php">Carrito</a>
     </div>  
-    <button class="inicio-sesion">Iniciar Sesión</button>
+    <a href="iniciar_sesion.php"><button class="inicio-sesion">Iniciar Sesión</button></a>
 </div>

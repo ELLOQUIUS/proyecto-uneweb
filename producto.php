@@ -2,7 +2,7 @@
 <div class="producto">
     <h3><?= $row["nombre"];?></h3>
     <p class="precio"><?= $row["precio"];?> $</p>
-    <img class="imagen" src="<?= $row["foto"];?>" alt="<?= $row["nombre"];?>">
+    <img class="imagen-producto" src="<?= $row["foto"];?>" alt="<?= $row["nombre"];?>">
     <p class="descripcion"><?= $row["descripcion"];?></p>
     <div class="botones">
         <button class="boton boton-agregar">Agregar a Carrito</button>
