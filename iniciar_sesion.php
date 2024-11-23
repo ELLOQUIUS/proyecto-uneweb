@@ -3,7 +3,7 @@
     include "./heading.php" ?>
 
 <body class="fondo">
-    <form class="iniciar-sesion" method="post">
+    <form class="iniciar-sesion " method="post">
         <div class="imagen-usuario"></div>
         <div class="datos-usuario">
             <div class="contenedor-input-usuario">

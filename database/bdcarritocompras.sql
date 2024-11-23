@@ -29,10 +29,10 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `cliente` (
   `idCliente` int(11) NOT NULL,
-  `Dni` varchar(9) NOT NULL,
-  `Nombres` varchar(255) NOT NULL,
-  `Direccion` varchar(255) NOT NULL,
-  `Email` varchar(255) NOT NULL,
+  `dni` varchar(9) NOT NULL,
+  `nombre` varchar(255) NOT NULL,
+  `direccion` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
   `contrasena` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -71,11 +71,11 @@ CREATE TABLE `detalle_compras` (
 
 CREATE TABLE `producto` (
   `idProducto` int(11) NOT NULL,
-  `Nombres` varchar(255) NOT NULL,
-  `Foto` varchar(255) DEFAULT NULL,
-  `Descripcion` text DEFAULT NULL,
-  `Precio` double NOT NULL,
-  `Stock` int(11) NOT NULL
+  `nombre` varchar(255) NOT NULL,
+  `foto` varchar(255) DEFAULT NULL,
+  `descripcion` text DEFAULT NULL,
+  `precio` double NOT NULL,
+  `stock` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
