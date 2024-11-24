@@ -21,9 +21,5 @@
         <?php include "./producto.php"; ?>     
         <?php } ?>
     </div>      
-
-
-
-    
 </body>
 </html>
