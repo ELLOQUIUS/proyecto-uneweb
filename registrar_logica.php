@@ -9,22 +9,26 @@
                 <script>alert("Usuario no disponible. Elija otro")</script>
                 <meta http-equiv="refresh" content="0;URL=registrar.php">
             <?php 
+            }else{
+                $sql = "INSERT INTO cliente(dni,nombre,direccion,email,contrasena) VALUES ('$_POST[cedula]','$_POST[usuario]','$_POST[direccion]','$_POST[email]','$_POST[contrasena]');";     
+                $result = mysqli_query($link, $sql); //ejecuto la consulta
+                if (!mysqli_error($link)) {?>
+                    <script>alert("Usuario registrado correctamente!")</script>
+                    <meta http-equiv="refresh" content="0;URL=index.php">
+                <?php
+                }else{?>
+                    <script>alert("Estamos en mantenimiento preventivo")</script>
+                    <meta http-equiv="refresh" content="0;URL=registrar.php">  
+          <?php }    
             }
-            $sql = "INSERT INTO cliente(dni,nombre,direccion,email,contrasena) VALUES ('$_POST[cedula]','$_POST[usuario]','$_POST[direccion]','$_POST[email]','$_POST[contrasena]');";     
-            $result = mysqli_query($link, $sql); //ejecuto la consulta
-            if (!mysqli_error($link)) {?>
-                <script>alert("Usuario registrado correctamente!")</script>
-                <meta http-equiv="refresh" content="0;URL=index.php">
-            <?php
-            }?>
-            <script>alert("Estamos en mantenimiento preventivo")</script>
-            <meta http-equiv="refresh" content="0;URL=registrar.php">      
-    <?php} ?>
-        <script>alert("Estamos en mantenimiento preventivo")</script> 
+        }else{ ?>
+            <script>alert("Estamos en mantenimiento preventivo")</script> 
+            <meta http-equiv="refresh" content="0;URL=registrar.php">
+  <?php }
+    }else{ ?>
+        <script>alert("Las contraseñas no coinciden")</script>
         <meta http-equiv="refresh" content="0;URL=registrar.php">
-<?php }?>
-    <script>alert("Las contraseñas no coinciden")</script>
-    <meta http-equiv="refresh" content="0;URL=registrar.php">
+<?php } ?>
 
 
 <!--
