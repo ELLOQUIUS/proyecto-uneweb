@@ -16,9 +16,9 @@
         $sql = "SELECT * FROM producto;";
         $result = mysqli_query($link, $sql);
         while ($row = mysqli_fetch_assoc($result)){
-    ?>
-        <?php include "./producto.php"; ?>     
-        <?php } ?>
+    
+            include "./producto.php";      
+        } ?>
     </div>        
 </body>
 </html>

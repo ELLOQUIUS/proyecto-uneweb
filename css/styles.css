@@ -271,3 +271,81 @@
     column-gap: 7px;
     margin-bottom: 10px;
 }
+
+.tabla-modificar-agregar{
+    margin-top: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.tabla-productos{
+    width: 60%;
+    max-width: 900px;
+    height: 100px;
+    display: grid;
+    grid-template-columns: 90px 90px 90px 90px 90px 90px 90px; /* Siete columnas de 100px cada una */
+    gap: 7px;
+}
+
+.center{
+    text-align: center;
+}
+
+.opciones{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.boton-modificar:hover,.boton-eliminar:hover{
+    transform: scale(1.1);
+}
+
+.boton-modificar{
+    background-color: rgb(246, 188, 0);
+    border: 1px solid black;
+    transition: transform 0.3s ease;
+    border-radius: 5px;
+    height: 25px;
+}
+
+.boton-eliminar{
+    background-color: rgb(216, 43, 0);
+    border: 1px solid black;
+    transition: transform 0.3s ease;
+    border-radius: 5px;
+    height: 25px;
+}
+
+.contenedor-agregar{
+    background-color: #e4e4e4;
+    margin-left: 60px;
+    padding: 25px;
+    padding-top: 15px;
+    width: 350px;
+    height: 650px;
+    border: 1px solid rgb(210, 210, 210);
+    border-radius: 10px
+}
+
+.medium-input{
+    width: 330px;
+    height: 30px;
+    padding-left: 10px;
+}
+
+.large-input{
+    padding: 10px;
+}
+
+.boton-agregar-producto:hover{
+    transform: scale(1.1);
+}
+
+.boton-agregar-producto{
+    font-size: 20px;
+    width: 340px;
+    height: 50px;
+    margin-top: 25px;
+}
