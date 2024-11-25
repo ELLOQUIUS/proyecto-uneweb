@@ -351,3 +351,9 @@
     height: 50px;
     margin-top: 25px;
 }
+
+.no-decoration{
+    text-decoration: none;
+    color: black;
+    display: block; /* Hace que el enlace sea un bloque */
+}
