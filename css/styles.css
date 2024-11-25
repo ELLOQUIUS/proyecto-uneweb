@@ -326,7 +326,9 @@
     width: 350px;
     height: 650px;
     border: 1px solid rgb(210, 210, 210);
-    border-radius: 10px
+    border-radius: 10px;
+    position: fixed;
+    top:100;
 }
 
 .medium-input{

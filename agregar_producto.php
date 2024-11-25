@@ -32,7 +32,7 @@
                     <label for="descripcion">
                     <textarea class="large-input" id="descripcion" name="descripcion" rows="4" cols="50"></textarea>
                 </div>
-                <button class="boton boton-agregar boton-agregar-producto">Agregar</button>
+                <button class="boton boton-agregar boton-agregar-producto" type="submit">Agregar</button>
             </div>
         </form>
     </div>
