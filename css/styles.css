@@ -357,3 +357,21 @@
     color: black;
     display: block; /* Hace que el enlace sea un bloque */
 }
+
+.tabla-modificar{
+    margin-top: 80px;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+.contenedor-modificar{
+    background-color: #e4e4e4;
+    margin-left: 60px;
+    padding: 25px;
+    padding-top: 15px;
+    width: 350px;
+    height: 650px;
+    border: 1px solid rgb(210, 210, 210);
+    border-radius: 10px;
+}

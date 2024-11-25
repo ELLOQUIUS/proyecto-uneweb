@@ -51,7 +51,7 @@
 
             include "./producto_tabla.php";
 ?>          <div class="opciones">
-                <button class="boton-modificar">Modificar</button>
+                <button class="boton-modificar"><a class="no-decoration" href="modificar_producto.php?mod=<?php print$row['idProducto']; ?> ">Modificar</a></td></button>
                 <button class="boton-eliminar"><a class="no-decoration" href="eliminar_producto.php?eli=<?php print $row['idProducto']; ?>">Eliminar</a></button>
             </div>
 <?php   }
