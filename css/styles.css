@@ -19,10 +19,6 @@
     top:0;
 }
 
-.inicio-sesion{
-    height: 40px;
-    width: 100px;
-}
 
 .nombre-carrito{
     color: white;
@@ -35,12 +31,19 @@
     justify-content: space-evenly;
 }
 
+.boton-red:hover{
+    background-color: rgb(195, 0, 0);
+    transform: scale(1.1);
+}
+
 .inicio-sesion:hover{
     background-color: orange;
     transform: scale(1.1);
 }
 
-.inicio-sesion{
+.inicio-sesion,.boton-red{
+    height: 40px;
+    width: 100px;
     border-radius: 10px;
     margin-right: 50px;
     transition: transform 0.3s ease;

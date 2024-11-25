@@ -46,7 +46,7 @@
                 </label>
             </div>
             <div class="checkbox-admin">
-                <input type="checkbox">¿Iniciar como administrador?
+                <input type="checkbox" name="checkadmin" value="1">¿Iniciar como administrador?
             </div>
             <!-- <button class="inicio-sesion iniciar-sesion-iniciar"><a id="enlace_iniciar_sesion" href="./index.php">Registrarse</a></button> -->  
             <button class="inicio-sesion iniciar-sesion-iniciar boton-registrar" type="submit">Registrarse</button>

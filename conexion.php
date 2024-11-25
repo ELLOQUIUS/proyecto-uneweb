@@ -6,4 +6,7 @@
     if (!$link) {
         die('Error de Conexión (' . mysqli_connect_errno() . ') '. mysqli_connect_error());
     }
+    if (session_status() != PHP_SESSION_ACTIVE){
+        session_start();
+    }
 ?>  
