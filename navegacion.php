@@ -9,6 +9,7 @@
         <a class="enlace" href="index.php">Home</a>
 <?php if (isset($_SESSION['user'])){
 ?>      <a class="enlace" href="carrito.php">Carrito</a>
+        <a class="enlace" href="compras.php">Compras</a>    
 <?php   if ($_SESSION['admin']){
 ?>          <a class="enlace" href="agregar_producto.php">Agregar Producto</a>  
 <?php   }
