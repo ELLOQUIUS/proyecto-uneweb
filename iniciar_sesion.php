@@ -15,7 +15,6 @@
                 <p>Contraseña</p>
                 <label for="contrasena" id="input_contrasena">
                 <input class="input_contrasena" id="contrasena" name="password" type="password" required>
-                <button class="ojito"> 👁️ </button>
                 </label>
             </div>
             <button class="inicio-sesion iniciar-sesion-iniciar" type="submit">Iniciar Sesión</button>

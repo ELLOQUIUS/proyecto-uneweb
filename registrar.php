@@ -34,7 +34,6 @@
                 <p>Contraseña</p>
                 <label for="cotrasena" id="input_contrasena">
                 <input class="input_contrasena" id="contrasena" type="password" name="contrasena" required>
-                <button class="ojito"> 👁️ </button>
                 </label>
                 </label>
             </div>
@@ -42,7 +41,6 @@
                 <p>Confirmar Contraseña</p>
                 <label for="contrasena-conf" id="input_contrasena">
                 <input class="input_contrasena" id="contrasena-conf" type="password" name="contrasena-conf"  required>
-                <button class="ojito"> 👁️ </button>
                 </label>
             </div>
             <div class="checkbox-admin">

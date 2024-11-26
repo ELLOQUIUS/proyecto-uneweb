@@ -228,12 +228,6 @@
     font-size: 17px;
 }
 
-.ojito{
-    transform: translate(335px,-28px);
-    border: none;
-    cursor: pointer;
-}
-
 .iniciar-sesion-iniciar:hover{
     background-color: rgb(99, 213, 225);
     border: solid black 1.5px;
