@@ -5,7 +5,8 @@
     <img class="imagen-producto" src="<?= $row["foto"];?>" alt="<?= $row["nombre"];?>">
     <p class="descripcion"><?= $row["descripcion"];?></p>
     <div class="botones">
-        <button class="boton boton-agregar">Agregar a Carrito</button>
+        <button onclick="location.href='./agregar_carrito.php?idpro=<?php print$row['idProducto'];?>'" class="boton boton-agregar">Agregar a Carrito</button>
         <button class="boton boton-comprar">Comprar</button>
     </div>
 </div>
+
