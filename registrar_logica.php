@@ -17,6 +17,12 @@
                 }  
                 $result = mysqli_query($link, $sql); //ejecuto la consulta
                 $_SESSION['user'] = $_POST["usuario"];
+
+                $sql = "SELECT idCliente FROM cliente WHERE '$_POST[usuario]' = nombre";
+                $result = mysqli_query($link, $sql); //ejecuto la consulta
+                $row = mysqli_fetch_assoc($result);
+                $_SESSION['id_del_cliente'] = $row["idCliente"];
+                
                 if (!mysqli_error($link)) {
                     if ($_POST['checkadmin'] == 1) {
                         $_SESSION['admin'] = true;
@@ -39,11 +45,3 @@
 ?>      <script>alert("Las contraseñas no coinciden")</script>
         <meta http-equiv="refresh" content="0;URL=registrar.php">
 <?php } ?>
-
-
-<!--
-<script> alert("Usuario registrado correcamente!")</script>
-<meta http-equiv="refresh" content="0;URL=index.php">
-
-<script>alert("Las contraseñas no coinciden")</script>
-<meta http-equiv="refresh" content="0;URL=registrar.php"> -->

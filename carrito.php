@@ -22,11 +22,10 @@
 ?>          
             <button class="boton-eliminar"><a class="no-decoration" href="eliminar_producto_carrito.php?eliPC=<?php print $filas['id_producto'];?> & idC=<?php print $filas['id_cliente'];?> & it=<?php print $filas['item'];?>">Eliminar</a></button>
 <?php   }
- ?>
-
+?>
     </div>
     <div class="comprar_producto">
-        <form method="post" action="./agregar_producto_logica.php">
+        <form method="post" action="./pagar_logica.php">
             <div class="contenedor-agregar no-margin" style="height: 550px;">
                 <h2>Generar Compra</h2>
                 <div>
@@ -36,17 +35,17 @@
                 <div>
                     <h4>Direccion de Tarjeta</h4>
                     <label for="tarjeta">
-                    <input class="medium-input" type="number" name="tarjeta" id="tarjeta"></label>
+                    <input class="medium-input" type="number" name="tarjeta" id="tarjeta" required></label>
                 </div>
                 <div>
                     <h4>Código de seguridad</h4>
                     <label for="codigo">
-                    <input class="medium-input" type="password" name="codigo" id="codigo"></label>
+                    <input class="medium-input" type="password" name="codigo" id="codigo" required></label>
                 </div>
                 <div>
                     <h4>Monto</h4>
                     <label for="monto">
-                    <input class="medium-input" type="number" name="monto" id="monto"></label>
+                    <input class="medium-input" type="float" name="monto" id="monto" step="0.01" required></label>
                 </div>
                 <button class="boton boton-agregar boton-agregar-producto" type="submit">Pagar</button>
             </div>

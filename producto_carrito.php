@@ -12,5 +12,5 @@ $prod = mysqli_fetch_assoc($respuesta)
 <p class="center"><?= $prod['descripcion']; ?></p>
 <p class="center"><?= $prod['precio']; ?></p>
 <?php
-    $_SESSION['total'] = $_SESSION['total'] + $prod['precio']; 
+    $_SESSION['total'] = round($_SESSION['total'], 2) + round($prod['precio'], 2); 
 ?>

@@ -1,12 +1,13 @@
 <?php
     include "./conexion.php";
-    $sql = "SELECT nombre,contrasena,administrador FROM cliente WHERE '$_POST[user]' = nombre;";
+    $sql = "SELECT nombre,contrasena,administrador,idCliente FROM cliente WHERE '$_POST[user]' = nombre;";
     $result = mysqli_query($link, $sql); //ejecuto la consulta
     if (!mysqli_error($link)) {
         $row = mysqli_fetch_assoc($result);
         if ($row != null){
             if ($row["contrasena"] == "$_POST[password]"){
                 $_SESSION['user'] = $row["nombre"];
+                $_SESSION['id_del_cliente'] = $row["idCliente"];
                 if ($row["administrador"] == 1) {
                     $_SESSION['admin'] = true;
                 }else{
