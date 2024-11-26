@@ -20,7 +20,7 @@
 
             include "./producto_carrito.php";
 ?>          
-            <button class="boton-eliminar">Eliminar</button>
+            <button class="boton-eliminar"><a class="no-decoration" href="eliminar_producto_carrito.php?eliPC=<?php print $filas['id_producto'];?> & idC=<?php print $filas['id_cliente'];?> & it=<?php print $filas['item'];?>">Eliminar</a></button>
 <?php   }
  ?>
 
