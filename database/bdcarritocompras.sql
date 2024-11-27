@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-11-2024 a las 03:39:24
+-- Tiempo de generación: 27-11-2024 a las 02:26:17
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -63,14 +63,10 @@ CREATE TABLE `carrito` (
 --
 
 INSERT INTO `carrito` (`id_cliente`, `item`, `id_producto`) VALUES
-(19, 1, 1),
-(4, 1, 2),
-(4, 2, 2),
-(19, 2, 2),
-(4, 3, 3),
-(19, 3, 3),
-(19, 4, 4),
-(19, 5, 10);
+(22, 2, 2),
+(23, 1, 2),
+(23, 2, 2),
+(22, 1, 12);
 
 -- --------------------------------------------------------
 
@@ -109,7 +105,10 @@ INSERT INTO `cliente` (`idCliente`, `dni`, `nombre`, `direccion`, `email`, `cont
 (17, '28416652', 'zain', 'mi piso', 'migueluchogordillo@gmail.com', '123', 0),
 (18, '28416652', 'lala', 'qqweqwe', 'rogerwtf4+naz9@gmail.com', '333', 1),
 (19, '9095692', 'elloquius', 'asdasd', 'elloquius@gmail.com', '123', 1),
-(20, '28416652', 'jesus', 'barquisimeto', 'rogerwtf4+naz9@gmail.com', '444', 1);
+(20, '28416652', 'jesus', 'barquisimeto', 'rogerwtf4+naz9@gmail.com', '444', 1),
+(21, '12113123', 'felix', '1123123', 'rogerwtf4+naz9@gmail.com', '123', 1),
+(22, '1212123', 'leo', '123123123', 'elloquius@gmail.com', '123', 1),
+(23, '123123123', 'kevin', 'mi casa', 'elloquius@gmail.com', '123', 1);
 
 -- --------------------------------------------------------
 
@@ -124,6 +123,20 @@ CREATE TABLE `compras` (
   `monto` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Volcado de datos para la tabla `compras`
+--
+
+INSERT INTO `compras` (`idCompras`, `idCliente`, `fechaCompra`, `monto`) VALUES
+(8, 19, '2024-11-26 ', 486),
+(9, 19, '2024-11-26 ', 231.57),
+(10, 22, '2024-11-26 ', 520),
+(11, 22, '2024-11-26 ', 1592),
+(12, 22, '2024-11-26 ', 99),
+(13, 22, '2024-11-26 ', 199),
+(14, 23, '2024-11-26 ', 1083),
+(15, 23, '2024-11-26 ', 199);
+
 -- --------------------------------------------------------
 
 --
@@ -134,9 +147,39 @@ CREATE TABLE `detalle_compras` (
   `idDetalle` int(11) NOT NULL,
   `idProducto` int(11) NOT NULL,
   `idCompras` int(11) NOT NULL,
-  `cantidad` int(11) NOT NULL,
   `precioCompra` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `detalle_compras`
+--
+
+INSERT INTO `detalle_compras` (`idDetalle`, `idProducto`, `idCompras`, `precioCompra`) VALUES
+(8, 1, 8, 188),
+(9, 2, 8, 199),
+(10, 3, 8, 99),
+(11, 2, 9, 199),
+(12, 4, 9, 32.57),
+(13, 12, 10, 133),
+(14, 2, 10, 199),
+(15, 1, 10, 188),
+(16, 2, 11, 199),
+(17, 2, 11, 199),
+(18, 2, 11, 199),
+(19, 2, 11, 199),
+(20, 2, 11, 199),
+(21, 2, 11, 199),
+(22, 2, 11, 199),
+(23, 2, 11, 199),
+(24, 3, 12, 99),
+(25, 2, 13, 199),
+(26, 1, 14, 188),
+(27, 2, 14, 199),
+(28, 3, 14, 99),
+(29, 2, 14, 199),
+(30, 2, 14, 199),
+(31, 2, 14, 199),
+(32, 2, 15, 199);
 
 -- --------------------------------------------------------
 
@@ -162,7 +205,7 @@ INSERT INTO `producto` (`idProducto`, `nombre`, `foto`, `descripcion`, `precio`,
 (2, 'Smart TV', 'https://images-na.ssl-images-amazon.com/images/I/81R3dLptKcL._AC_UL600_SR600,400_.jpg', 'Increible resolución, con gráficos 4k', 199, 2),
 (3, 'Chromecast', 'https://m.media-amazon.com/images/I/510wm50VDHL._AC_SX425_.jpg', 'Control y adaptador chromecast con gráficos 4k', 99, 10),
 (4, 'Cámara Go Pro', 'https://http2.mlstatic.com/D_NQ_NP_733488-MLV74339217428_022024-O.webp', 'Una cámara para grabar tus mejores aventuras y acrobacias', 32.57, 12),
-(10, 'Nintendo DS', 'https://www.nintendo.com/eu/media/images/03_teaser_module_1_square/systems_2/nintendo_ds_3/TM_DS_Lite_TouchScreen.png', 'La mejor consola portátil', 232, 10);
+(12, 'AirPods', 'https://m.media-amazon.com/images/I/51zjb8XYdNL.jpg', 'Auriculares inalámbricos para tus mejores músicas', 133, 4);
 
 --
 -- Índices para tablas volcadas
@@ -210,25 +253,25 @@ ALTER TABLE `producto`
 -- AUTO_INCREMENT de la tabla `cliente`
 --
 ALTER TABLE `cliente`
-  MODIFY `idCliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `idCliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT de la tabla `compras`
 --
 ALTER TABLE `compras`
-  MODIFY `idCompras` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idCompras` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT de la tabla `detalle_compras`
 --
 ALTER TABLE `detalle_compras`
-  MODIFY `idDetalle` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idDetalle` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT de la tabla `producto`
 --
 ALTER TABLE `producto`
-  MODIFY `idProducto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `idProducto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- Restricciones para tablas volcadas
