@@ -483,3 +483,12 @@
     background-color: rgb(221, 221, 221);
     font-size: 25px;
 }
+
+.tabla-producto{
+    margin-top: 100px;
+    width: 60%;
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: 130px 130px 130px 130px 130px; /* Siete columnas de 100px cada una */
+    grid-template-rows: 80px 80px;
+}

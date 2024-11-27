@@ -6,7 +6,7 @@
     <p class="descripcion"><?= $row["descripcion"];?></p>
     <div class="botones">
         <button onclick="location.href='./agregar_carrito.php?idpro=<?php print$row['idProducto'];?>'" class="boton boton-agregar">Agregar a Carrito</button>
-        <button class="boton boton-comprar">Comprar</button>
+        <button onclick="location.href='./comprar_producto.php?idpro=<?php print$row['idProducto'];?>'" class="boton boton-comprar">Comprar</button>
     </div>
 </div>
 
