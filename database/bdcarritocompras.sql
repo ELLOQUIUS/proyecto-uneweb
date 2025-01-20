@@ -119,7 +119,7 @@ INSERT INTO `cliente` (`idCliente`, `dni`, `nombre`, `direccion`, `email`, `cont
 CREATE TABLE `compras` (
   `idCompras` int(11) NOT NULL,
   `idCliente` int(11) NOT NULL,
-  `fechaCompra` varchar(11) NOT NULL,
+  `fechaCompra` varchar(255) NOT NULL,
   `monto` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 

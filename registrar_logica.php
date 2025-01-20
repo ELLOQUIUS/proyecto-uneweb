@@ -1,5 +1,7 @@
 <?php
     include "./conexion.php";
+    error_reporting(E_ALL & ~E_NOTICE & ~E_WARNING);
+    ini_set('display_errors', 'Off');
     if ($_POST["contrasena"] == $_POST["contrasena-conf"]){
         $sql = "SELECT nombre FROM cliente WHERE '$_POST[usuario]' = nombre";
         $result = mysqli_query($link, $sql); //ejecuto la consulta
